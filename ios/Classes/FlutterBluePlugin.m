@@ -667,7 +667,7 @@ typedef NS_ENUM(NSUInteger, LogLevel) {
   NSLog(@"uuid: %@ value: %@", [characteristic.UUID fullUUIDString], [characteristic value]);
   NSMutableArray *descriptorProtos = [NSMutableArray new];
   for(CBDescriptor *d in [characteristic descriptors]) {
-    [descriptorProtos addObject:[self toDescriptorProto:peripheral descriptor:d]];
+ //   [descriptorProtos addObject:[self toDescriptorProto:peripheral descriptor:d]];
   }
   [result setDescriptorsArray:descriptorProtos];
   if([characteristic.service isPrimary]) {
